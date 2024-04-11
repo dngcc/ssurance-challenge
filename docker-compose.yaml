@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  ssurance-challenge:
+    build:
+      dockerfile: Dockerfile
+    environment:
+      - API_PORT=8080
+      - INTERVAL_IN_SECONDS=60
+      - NUMBER_OF_TICKS=60
+      - FILE_LOCATION=../sliding_window_counter.gob
+    ports:
+      - 8080:8080
